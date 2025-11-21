@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanatçı Profili - Idefix Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .idefix-blue {
+            color: #0047ba;
+        }
+        
+        .idefix-bg-blue {
+            background-color: #0047ba;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #0047ba;
+        }
+        
+        /* Ürün kartı hover efekti */
+        .product-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between gap-4">
+                <!-- Logo (Metin bazlı temsili) -->
+                <a href="#" class="text-3xl font-bold idefix-blue tracking-tighter">idefix</a>
+
+                <!-- Arama Çubuğu (Desktop) -->
+                <div class="hidden md:flex flex-1 max-w-2xl mx-8 relative">
+                    <input type="text" placeholder="Kitap, müzik, film, hobi ürünleri ara..." class="w-full border-2 border-gray-200 rounded-full py-2 px-5 pr-12 search-input text-sm">
+                    <button class="absolute right-0 top-0 h-full px-4 text-white idefix-bg-blue rounded-r-full hover:bg-blue-700 transition">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <!-- Kullanıcı Menüsü -->
+                <div class="flex items-center gap-6 text-gray-600 text-sm">
+                    <div class="hidden md:flex flex-col items-center cursor-pointer hover:text-blue-700">
+                        <i class="fa-regular fa-user text-lg mb-1"></i>
+                        <span>Giriş Yap</span>
+                    </div>
+                    <div class="hidden md:flex flex-col items-center cursor-pointer hover:text-blue-700">
+                        <i class="fa-regular fa-heart text-lg mb-1"></i>
+                        <span>Favorilerim</span>
+                    </div>
+                    <div class="flex flex-col items-center cursor-pointer hover:text-blue-700 relative">
+                        <i class="fa-solid fa-cart-shopping text-lg mb-1"></i>
+                        <span>Sepetim</span>
+                        <span class="absolute -top-1 right-0 bg-orange-500 text-white text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">2</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Search -->
+            <div class="md:hidden mt-3 relative">
+                <input type="text" placeholder="Ürün ara..." class="w-full border border-gray-300 rounded-lg py-2 px-3 text-sm">
+                <i class="fa-solid fa-magnifying-glass absolute right-3 top-3 text-gray-400"></i>
+            </div>
+        </div>
+        
+        <!-- Alt Menü (Kategoriler) -->
+        <div class="border-t border-gray-100 hidden md:block">
+            <div class="container mx-auto px-4">
+                <nav class="flex gap-6 py-3 text-sm font-medium text-gray-700">
+                    <a href="#" class="hover:text-blue-600">Kitap</a>
+                    <a href="#" class="hover:text-blue-600">Elektronik</a>
+                    <a href="#" class="hover:text-blue-600">Oyuncak</a>
+                    <a href="#" class="hover:text-blue-600">Kırtasiye</a>
+                    <a href="#" class="hover:text-blue-600">Hobi</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-6">
+        
+        <!-- Breadcrumb -->
+        <div class="text-xs text-gray-500 mb-4">
+            <a href="#" class="hover:underline">Anasayfa</a> <i class="fa-solid fa-chevron-right mx-1 text-[10px]"></i>
+            <a href="#" class="hover:underline">Yazarlar</a> <i class="fa-solid fa-chevron-right mx-1 text-[10px]"></i>
+            <span class="font-semibold text-gray-800">Mehmet Uzun</span> <!-- Örnek İsim -->
+        </div>
+
+        <!-- Yazar Kartı (Profil) -->
+        <div class="bg-white rounded-xl shadow-sm p-6 mb-8 border border-gray-100">
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <!-- Görsel -->
+                <div class="w-full md:w-48 flex-shrink-0 text-center md:text-left">
+                    <div class="inline-block p-1 border border-gray-200 rounded-lg bg-white shadow-sm">
+                        <img src="https://i.idefix.com/pimages/Content/Uploads/ArtistImages/artist__215414.jpg" 
+                             alt="Yazar Görseli" 
+                             class="w-full h-auto rounded object-cover max-w-[180px] mx-auto"
+                             onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
+                    </div>
+                </div>
+
+                <!-- Bilgiler -->
+                <div class="flex-1">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-2">Mehmet Uzun</h1>
+                    <div class="text-orange-500 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span class="text-gray-500 ml-1">(4.8 - 1256 Değerlendirme)</span>
+                    </div>
+                    
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Modern edebiyatın önemli isimlerinden biri olan yazar, eserlerinde kültürel zenginlikleri ve toplumsal dönüşümleri ustalıkla işlemektedir. Romanları pek çok dile çevrilmiş ve uluslararası alanda yankı uyandırmıştır.
+                    </p>
+
+                    <div class="flex gap-3 mt-4">
+                        <button class="px-6 py-2 bg-white border border-gray-300 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-50 transition flex items-center gap-2">
+                            <i class="fa-regular fa-heart"></i> Takip Et
+                        </button>
+                        <button class="px-6 py-2 idefix-bg-blue text-white rounded-full text-sm font-medium hover:bg-blue-700 transition flex items-center gap-2">
+                            <i class="fa-solid fa-share-nodes"></i> Paylaş
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filtreleme ve Sıralama -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-6 pb-4 border-b border-gray-200">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 md:mb-0">Eserleri <span class="text-gray-400 text-base font-normal ml-1">(12 Kitap)</span></h2>
+            
+            <div class="flex gap-4">
+                <select class="border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white text-gray-700 focus:outline-none focus:border-blue-500">
+                    <option>Çok Satanlar</option>
+                    <option>Yeni Çıkanlar</option>
+                    <option>Fiyatı Artan</option>
+                    <option>Fiyatı Azalan</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Kitap Listesi (Grid) -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-12">
+            
+            <!-- Ürün Kartı 1 -->
+            <div class="product-card bg-white rounded-lg border border-gray-100 p-4 flex flex-col relative group cursor-pointer">
+                <div class="relative mb-4 aspect-[2/3] bg-gray-100 rounded overflow-hidden">
+                     <!-- Placeholder Kitap Kapağı -->
+                    <div class="w-full h-full flex items-center justify-center bg-slate-200 text-slate-400">
+                        <i class="fa-solid fa-book text-4xl"></i>
+                    </div>
+                    <div class="absolute top-2 left-2 bg-yellow-400 text-xs font-bold px-2 py-1 rounded text-gray-800">%25</div>
+                </div>
+                <h3 class="text-sm font-semibold text-gray-800 line-clamp-2 mb-1 group-hover:text-blue-600 transition">Aşk Gibi Aydınlık Ölüm Gibi Karanlık</h3>
+                <p class="text-xs text-gray-500 mb-3">İthaki Yayınları</p>
+                <div class="mt-auto">
+                    <div class="text-xs text-gray-400 line-through">180,00 TL</div>
+                    <div class="text-lg font-bold idefix-blue">135,00 TL</div>
+                    <button class="w-full mt-3 py-2 border border-blue-600 text-blue-600 rounded-md text-sm font-medium hover:bg-blue-600 hover:text-white transition">Sepete Ekle</button>
+                </div>
+            </div>
+
+            <!-- Ürün Kartı 2 -->
+            <div class="product-card bg-white rounded-lg border border-gray-100 p-4 flex flex-col relative group cursor-pointer">
+                <div class="relative mb-4 aspect-[2/3] bg-gray-100 rounded overflow-hidden">
+                    <div class="w-full h-full flex items-center justify-center bg-slate-200 text-slate-400">
+                        <i class="fa-solid fa-book-open text-4xl"></i>
+                    </div>
+                </div>
+                <h3 class="text-sm font-semibold text-gray-800 line-clamp-2 mb-1 group-hover:text-blue-600 transition">Kader Kuyusu</h3>
+                <p class="text-xs text-gray-500 mb-3">İthaki Yayınları</p>
+                <div class="mt-auto">
+                    <div class="text-lg font-bold idefix-blue">150,00 TL</div>
+                    <button class="w-full mt-3 py-2 border border-blue-600 text-blue-600 rounded-md text-sm font-medium hover:bg-blue-600 hover:text-white transition">Sepete Ekle</button>
+                </div>
+            </div>
+
+             <!-- Ürün Kartı 3 -->
+             <div class="product-card bg-white rounded-lg border border-gray-100 p-4 flex flex-col relative group cursor-pointer">
+                <div class="relative mb-4 aspect-[2/3] bg-gray-100 rounded overflow-hidden">
+                    <div class="w-full h-full flex items-center justify-center bg-slate-200 text-slate-400">
+                        <i class="fa-solid fa-book text-4xl"></i>
+                    </div>
+                    <div class="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Hızlı Kargo</div>
+                </div>
+                <h3 class="text-sm font-semibold text-gray-800 line-clamp-2 mb-
