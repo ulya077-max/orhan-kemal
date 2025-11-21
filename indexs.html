@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orhan Kemal | Edebiyatın Koca Çınarı</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #fdfbf7; /* Eski kağıt rengi */
+            color: #2d2d2d;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        .sepia-filter {
+            filter: sepia(30%) contrast(110%);
+        }
+        .quote-card {
+            transition: all 0.3s ease;
+        }
+        .quote-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .texture-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="antialiased texture-overlay">
+
+    <!-- Hero Section -->
+    <header class="relative bg-stone-900 text-stone-100 overflow-hidden min-h-[80vh] flex items-center justify-center border-b-8 border-amber-700">
+        <div class="absolute inset-0 z-0 opacity-30">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Orhan_Kemal_1965.jpg/800px-Orhan_Kemal_1965.jpg" 
+                 alt="Orhan Kemal Background" 
+                 class="w-full h-full object-cover sepia-filter object-top"
+                 onerror="this.src='https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/60 to-transparent z-10"></div>
+        
+        <div class="container mx-auto px-6 relative z-20 text-center mt-20">
+            <span class="text-amber-500 tracking-[0.3em] text-sm uppercase font-bold mb-4 block animate-fade-in">Toplumcu Gerçekçiliğin Usta Kalemi</span>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 text-white drop-shadow-lg">Orhan Kemal</h1>
+            <p class="text-xl md:text-2xl text-stone-300 max-w-2xl mx-auto italic font-light">
+                "Gerçek olan, öğrenmek, öğretmek ve insanlığı yüceltmektir."
+            </p>
+            <div class="mt-10 flex justify-center gap-4">
+                <a href="#biography" class="bg-amber-700 hover:bg-amber-800 text-white px-8 py-3 rounded-sm transition duration-300 flex items-center gap-2">
+                    <i data-lucide="user"></i> Hayatı
+                </a>
+                <a href="#works" class="border border-stone-400 hover:bg-stone-800 text-white px-8 py-3 rounded-sm transition duration-300 flex items-center gap-2">
+                    <i data-lucide="book-open"></i> Eserleri
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Biography Section -->
+    <section id="biography" class="py-20 container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-stone-800 mb-4">Bir Mücadele Adamı</h2>
+            <div class="w-24 h-1 bg-amber-700 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="w-12 h-12 bg-stone-200 rounded-full flex items-center justify-center text-amber-800 font-bold">1914</div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-800">Doğum ve Çocukluk</h3>
+                        <p class="text-stone-600 mt-2 leading-relaxed">
+                            Asıl adı Mehmet Raşit Öğütçü'dür. Adana'nın Ceyhan ilçesinde doğdu. Babası, ilk Meclis'te milletvekilliği yapmış Abdülkadir Kemali Bey'dir. Babasının siyasi nedenlerle Suriye'ye kaçması üzerine ortaokul son sınıfta eğitimini yarım bıraktı.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="w-12 h-12 bg-stone-200 rounded-full flex items-center justify-center text-amber-800 font-bold">1938</div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-800">Hapishane ve Nazım Hikmet</h3>
+                        <p class="text-stone-600 mt-2 leading-relaxed">
+                            Askerliği sırasında "yabancı rejimler lehine propaganda ve isyana muharrik" suçundan 5 yıl hapse mahkum edildi. Bursa Cezaevi'nde <span class="font-bold text-amber-800">Nazım Hikmet</span> ile tanışması, sanat yaşamının dönüm noktası oldu. Nazım'dan Fransızca, felsefe ve siyaset dersleri aldı; şiir yerine romana yöneldi.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="w-12 h-12 bg-stone-200 rounded-full flex items-center justify-center text-amber-800 font-bold">1950</div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-800">İstanbul ve Yazarlık</h3>
+                        <p class="text-stone-600 mt-2 leading-relaxed">
+                            İstanbul'a yerleşti ve geçimini tamamen yazarlıktan sağlamaya çalıştı. Hamallık, ırgatlık, katiplik gibi pek çok işte çalışmış olması, eserlerindeki "küçük adam"ı bu denli gerçekçi anlatmasının temelidir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="absolute -inset-4 bg-amber-100 transform rotate-2 rounded-lg shadow-lg z-0"></div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Orhan_Kemal.jpg" 
+                     alt="Orhan Kemal Portre" 
+                     class="relative z-10 w-full rounded-lg shadow-xl filter grayscale hover:grayscale-0 transition duration-500"
+                     onerror="this.src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'">
+                <div class="absolute bottom-4 left-4 z-20 bg-white/90 px-4 py-2 rounded shadow backdrop-blur-sm">
+                    <p class="text-sm font-bold text-stone-800">"Aydınlık gerçekçiliğin ustası"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Works & Quotes Section -->
+    <section id="works" class="py-20 bg-stone-100 border-t border-stone-200">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-stone-800 mb-4">Başyapıtları ve Unutulmaz Alıntılar</h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">Çukurova'nın ırgatlarını, İstanbul'un kenar mahallelerini ve ekmek kavgası veren insanları en iyi anlatan eserlerden seçkiler.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1: Murtaza -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border-b-4 border-amber-700 quote-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-stone-800">Murtaza</h3>
+                        <i data-lucide="bookmark" class="text-amber-700"></i>
+                    </div>
+                    <p class="text-sm text-stone-500 mb-6 uppercase tracking-widest">Otorite ve Birey</p>
+                    <div class="relative">
+                        <span class="absolute -top-4 -left-2 text-6xl text-stone-200 font-serif">“</span>
+                        <p class="text-stone-700 italic leading-loose pl-4 relative z-10">
+                            "Görüyorsun ya, yukarda Allah, Ankara'da Devlet, burda da ben! Hükümet ne emrederse o! Ben kanun adamıyım, kanun!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-stone-100">
+                        <p class="text-xs text-stone-400">Türk edebiyatının en tanınmış anti-kahramanlarından biri olan Bekçi Murtaza'nın trajikomik hikayesi.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Bereketli Topraklar Üzerinde -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border-b-4 border-amber-700 quote-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-stone-800">Bereketli Topraklar Üzerinde</h3>
+                        <i data-lucide="sun" class="text-amber-700"></i>
+                    </div>
+                    <p class="text-sm text-stone-500 mb-6 uppercase tracking-widest">Emek ve Sömürü</p>
+                    <div class="relative">
+                        <span class="absolute -top-4 -left-2 text-6xl text-stone-200 font-serif">“</span>
+                        <p class="text-stone-700 italic leading-loose pl-4 relative z-10">
+                            "Şehir dediğin nedir ki? Binalar, caddeler, otomobiller... Ama asıl şehir insanlardır. İnsanların derdi, kederi, neşesi..."
+                        </p>
+                    </div>
+                     <div class="mt-6 pt-4 border-t border-stone-100">
+                        <p class="text-xs text-stone-400">Orta Anadolu'dan Çukurova'ya çalışmaya gelen üç köylünün (İflahsızın Yusuf, Köse Hasan, Pehlivan Ali) dramı.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: 72. Koğuş -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border-b-4 border-amber-700 quote-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-stone-800">72. Koğuş</h3>
+                        <i data-lucide="lock" class="text-amber-700"></i>
+                    </div>
+                    <p class="text-sm text-stone-500 mb-6 uppercase tracking-widest">Umut ve Sefalet</p>
+                    <div class="relative">
+                        <span class="absolute -top-4 -left-2 text-6xl text-stone-200 font-serif">“</span>
+                        <p class="text-stone-700 italic leading-loose pl-4 relative z-10">
+                            "İnsanoğlu ümitsiz yaşayamaz. Ümit, ekmekten, sudan daha azizdir."
+                        </p>
+                    </div>
+                     <div class="mt-6 pt-4 border-t border-stone-100">
+                        <p class="text-xs text-stone-400">Cezaevindeki sefaleti, insanlık onurunu ve hayata tutunma çabasını anlatan bir başyapıt.</p>
+                    </div>
+                </div>
+                
+                <!-- Card 4: Baba Evi -->
+                 <div class="bg-white p-8 rounded-lg shadow-sm border-b-4 border-stone-400 quote-card md:col-span-3 lg:col-span-1">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-stone-800">Baba Evi</h3>
+                        <i data-lucide="home" class="text-stone-400"></i>
+                    </div>
+                    <p class="text-sm text-stone-500 mb-6 uppercase tracking-widest">Otobiyografik</p>
+                    <div class="relative">
+                        <span class="absolute -top-4 -left-2 text-6xl text-stone-200 font-serif">“</span>
+                        <p class="text-stone-700 italic leading-loose pl-4 relative z-10">
+                            "Babam, her zaman haklı olduğunu sanan, ama çoğu zaman yanılan, iyi kalpli fakat sert bir adamdı."
+                        </p>
+                    </div>
+                </div>
+                 <!-- Random Quote Generator Area -->
+                <div class="bg-stone-800 p-8 rounded-lg shadow-lg md:col-span-3 lg:col-span-2 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-amber-800"></div>
+                     <i data-lucide="quote" class="w-12 h-12 text-stone-600 mb-4"></i>
+                     <h3 class="text-stone-300 text-lg mb-2">Günün Sözü</h3>
+                     <p id="random-quote-text" class="text-2xl text-white font-serif italic mb-6 transition-opacity duration-500">"Önemli olan insanın insanlığını bilmesidir."</p>
+                     <button onclick="newQuote()" class="px-6 py-2 border border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-white transition rounded-full text-sm uppercase tracking-wider">
+                        Başka Bir Söz Getir
+                     </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h4 class="text-white text-xl font-bold mb-4">Orhan Kemal</h4>
+                <p class="text-sm leading-relaxed">
+                    15 Eylül 1914 - 2 Haziran 1970<br>
+                    Türk edebiyatının gerçekçi kalemi, sokağın ve emeğin sesi.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white text-xl font-bold mb-4">Önemli Eserleri</h4>
+                <ul class="text-sm space-y-2">
+                    <li>Baba Evi (1949)</li>
+                    <li>Avare Yıllar (1950)</li>
+                    <li>Cemile (1952)</li>
+                    <li>Murtaza (1952)</li>
+                    <li>Bereketli Topraklar Üzerinde (1954)</li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-center md:items-end justify-center">
+                <p class="text-xs text-stone-600">© 2023 Orhan Kemal Anısına Hazırlanmıştır.</p>
+                <div class="flex gap-4 mt-4">
+                    <a href="#" class="hover:text-white transition"><i data-lucide="book"></i></a>
+                    <a href="#" class="hover:text-white transition"><i data-lucide="pen-tool"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Random Quote Logic
+        const quotes = [
+            "İnsan, insan olduktan sonra, her şey olur.",
+            "Suçlu, toprağı değil, onu işleyemeyendir.",
+            "Dünyada en zor şey, insanın kendi kendini teselli etmesidir.",
+            "Açlık, insanı her yola sürükler.",
+            "Namuslu olmak ne zor şeymiş meğer?",
+            "İnsanlar hür doğar ama her yerde zincire vurulmuşlardır.",
+            "Kitaplar, şehrin en aydınlık pencereleridir."
+        ];
+
+        function newQuote() {
+            const textElement = document.getElementById('random-quote-text');
+            textElement.style.opacity = '0';
+            
+            setTimeout(() => {
+                const random = Math.floor(Math.random() * quotes.length);
+                textElement.textContent = `"${quotes[random]}"`;
+                textElement.style.opacity = '1';
+            }, 300);
+        }
+    </script>
+</body>
+</html>
